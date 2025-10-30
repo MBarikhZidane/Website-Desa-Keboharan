@@ -4,11 +4,11 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 text-white">
         <!-- Logo dan Nama -->
         <div class="flex items-center space-x-3">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_Kabupaten_Kutai_Kartanegara.png"
+            <img src="{{ asset('storage/' . 'logo.png') }}"
                 class="w-10 h-10" alt="Logo">
             <div>
-                <h1 class="text-lg md:text-xl font-bold">Desa Kersik</h1>
-                <p class="text-xs md:text-sm -mt-1">Kabupaten Kutai Kartanegara</p>
+                <h1 class="text-lg md:text-xl font-bold">Desa Keboharan</h1>
+                <p class="text-xs md:text-sm -mt-1">Kabupaten Sidoarjo</p>
             </div>
         </div>
 

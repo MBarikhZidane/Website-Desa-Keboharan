@@ -2,7 +2,7 @@
     <main class="p-6">
         <div class="bg-white p-6 rounded-lg shadow">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-bold">Daftar Dusun</h2>
+                <h2 class="text-lg font-bold">Pengaturan</h2>
 
                 <div class="flex items-center space-x-2">
                     <button wire:click="create" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
@@ -61,7 +61,7 @@
 
                 <form wire:submit.prevent="{{ $isEdit ? 'update' : 'store' }}">
                     <div class="mb-3">
-                        <label class="block text-sm font-medium text-gray-700">Agama</label>
+                        <label class="block text-sm font-medium text-gray-700">Navbar</label>
                         <select wire:model="nav_type"
                             class="w-full border border-gray-300 rounded p-2 focus:ring focus:ring-blue-300">
                             <option>Pilih Tipe</option>
@@ -74,7 +74,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="block text-sm font-medium text-gray-700">Agama</label>
+                        <label class="block text-sm font-medium text-gray-700">Warna</label>
                         <select wire:model="color_theme"
                             class="w-full border border-gray-300 rounded p-2 focus:ring focus:ring-blue-300">
                             <option>Pilih Warna

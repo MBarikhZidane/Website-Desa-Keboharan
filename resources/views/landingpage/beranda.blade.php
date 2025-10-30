@@ -4,7 +4,7 @@
     <!-- Wrapper gambar -->
     <div id="carousel-images" class="flex transition-transform duration-700">
         @foreach ($carousels as $carousel)
-            <img src="{{ asset('storage/' . $carousel->image) }}" 
+            <img src="{{ asset('storage/' . $carousel->image) }}"
                  alt="Carousel Image"
                  class="w-full h-full object-cover flex-shrink-0">
         @endforeach
@@ -107,10 +107,9 @@
         <!-- Wrapper responsif -->
         <div class="relative w-full" style="padding-top: 56.25%; /* Rasio 16:9 */">
             <iframe class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.501686428388!2d112.64667417586463!3d-7.422497373566368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e3c8b6238b67%3A0x3cb5efea8b1f37b8!2sDesa%20Keboharan%2C%20Kec.%20Krian%2C%20Kabupaten%20Sidoarjo%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
-                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13044.685014704128!2d112.60242733249947!3d-7.389518552286512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78082ea12704cd%3A0xd88802abd8c83eca!2sKeboharan%2C%20Kec.%20Krian%2C%20Kabupaten%20Sidoarjo%2C%20Jawa%20Timur!5e1!3m2!1sid!2sid!4v1761862865719!5m2!1sid!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     <div class="container mx-auto px-4 my-16">
@@ -234,7 +233,7 @@
         </div>
     </section>
 
-    
+
     <section class="bg-[#F9FAF5] py-16 px-6">
         <div class="max-w-6xl mx-auto">
             <h1 class="text-center text-3xl sm:text-4xl font-bold text-main mb-12">

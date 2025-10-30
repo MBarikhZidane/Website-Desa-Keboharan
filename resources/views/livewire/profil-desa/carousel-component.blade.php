@@ -2,7 +2,7 @@
     <main class="p-6">
         <div class="bg-white p-6 rounded-lg shadow">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-bold">Visi Misi dan Sejarah</h2>
+                <h2 class="text-lg font-bold">Carousel / Banner</h2>
 
                 <div class="flex items-center space-x-2">
                     <button wire:click="create" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">

@@ -62,7 +62,7 @@
         <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
             <div class="bg-white rounded-lg shadow-lg w-full max-w-lg p-6">
                 <h3 class="text-lg font-semibold mb-4">
-                    {{ $isEdit ? 'Edit Dusun' : 'Tambah Dusun' }}
+                    {{ $isEdit ? 'Edit' : 'Tambah' }}
                 </h3>
                 <form wire:submit.prevent="{{ $isEdit ? 'update' : 'store' }}">
                     <div class="mb-5">

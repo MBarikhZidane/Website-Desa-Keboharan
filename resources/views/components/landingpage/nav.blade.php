@@ -2,8 +2,8 @@
     <div class="container mx-auto h-20 flex justify-between items-center px-4">
         <!-- Logo -->
         <div class="logo flex items-center gap-2">
-            <div class="ikon px-3 py-2 bg-main rounded-full text-xl md:text-2xl">
-                <i class="bi bi-building text-white"></i>
+            <div class="ikon px-3 py-2 rounded-full text-xl md:text-2xl">
+                <img src="{{ asset('storage/' . 'logo.png') }}" class="w-15 h-15" alt="">
             </div>
             <div class="logo-text">
                 <h1 class="font-bold text-sm lg:text-lg">Desa Keboharan</h1>

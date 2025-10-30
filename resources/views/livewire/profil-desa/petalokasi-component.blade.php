@@ -2,7 +2,7 @@
     <main class="p-6">
         <div class="bg-white p-6 rounded-lg shadow">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-bold">Daftar Dusun</h2>
+                <h2 class="text-lg font-bold">Lokasi Desa</h2>
 
                 <div class="flex items-center space-x-2">
                     <button wire:click="create" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
@@ -66,7 +66,7 @@
         <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
             <div class="bg-white rounded-lg shadow-lg w-full max-w-lg p-6">
                 <h3 class="text-lg font-semibold mb-4">
-                    {{ $isEdit ? 'Edit Dusun' : 'Tambah Dusun' }}
+                    {{ $isEdit ? 'Edit' : 'Tambah' }}
                 </h3>
 
                 <form wire:submit.prevent="{{ $isEdit ? 'update' : 'store' }}">
@@ -128,7 +128,7 @@
 
     <!-- Modal Hapus -->
     @if ($showDeleteModal)
-        <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
             <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
                 <h3 class="text-lg font-semibold mb-4">Konfirmasi Hapus</h3>
                 <p>Apakah kamu yakin ingin menghapus data ini?</p>

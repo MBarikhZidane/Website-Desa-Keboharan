@@ -14,7 +14,7 @@
 
     {{-- Logo Desa --}}
     <div class="flex flex-col items-center mb-6">
-      <img src="{{ asset('storage/logo-desa.png') }}" class="w-20 h-20 object-cover" alt="Logo Desa">
+      <img src="{{ asset('storage/logo.png') }}" class="w-20 h-20 object-cover" alt="Logo Desa">
       <h1 class="text-2xl font-extrabold text-main mt-3 tracking-wide">
         Login Dashboard
       </h1>

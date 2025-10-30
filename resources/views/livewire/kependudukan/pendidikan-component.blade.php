@@ -69,7 +69,7 @@
                         <label class="block text-sm font-medium text-gray-700">Pendidikan</label>
                         <select wire:model="pendidikan_id"
                             class="w-full border border-gray-300 rounded p-2 focus:ring focus:ring-blue-300">
-                            <option value="">Pilih Agama</option>
+                            <option value="">Pilih Pendidikan</option>
                             @foreach ($pendidikans as $pendidikan)
                                 <option value="{{ $pendidikan->id }}">{{ $pendidikan->name }}</option>
                             @endforeach

@@ -2,7 +2,7 @@
     <main class="p-6">
         <div class="bg-white p-6 rounded-lg shadow">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-bold">Daftar Dusun</h2>
+                <h2 class="text-lg font-bold">Pengaturan</h2>
 
                 <div class="flex items-center space-x-2">
                     <button wire:click="create" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
@@ -20,7 +20,7 @@
                     <thead>
                         <tr class="bg-gray-200">
                             <th class="p-3">No</th>
-                            <th class="p-3">Tipe Nav</th>
+                            <th class="p-3">Tipe Navbar</th>
                             <th class="p-3">Warna Dasar</th>
                             <th class="p-3">Actions</th>
                         </tr>
@@ -61,7 +61,7 @@
 
                 <form wire:submit.prevent="{{ $isEdit ? 'update' : 'store' }}">
                     <div class="mb-3">
-                        <label class="block text-sm font-medium text-gray-700">Agama</label>
+                        <label class="block text-sm font-medium text-gray-700">Tipe Navbar</label>
                         <select wire:model="nav_type"
                             class="w-full border border-gray-300 rounded p-2 focus:ring focus:ring-blue-300">
                             <option value="type1" {{ $setting->nav_type == 'type1' ? 'selected' : '' }}>Tipe 1</option>
@@ -73,7 +73,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="block text-sm font-medium text-gray-700">Agama</label>
+                        <label class="block text-sm font-medium text-gray-700">Warna dasar</label>
                         <select wire:model="color_theme"
                             class="w-full border border-gray-300 rounded p-2 focus:ring focus:ring-blue-300">
                             <option value="green" {{ $setting->color_theme == 'green' ? 'selected' : '' }}>Hijau
