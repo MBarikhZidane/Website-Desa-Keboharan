@@ -105,7 +105,7 @@
 
     <!-- Modal Hapus -->
     @if ($showDeleteModal)
-        <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
             <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
                 <h3 class="text-lg font-semibold mb-4">Konfirmasi Hapus</h3>
                 <p>Apakah kamu yakin ingin menghapus data ini?</p>
