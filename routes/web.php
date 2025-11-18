@@ -26,6 +26,7 @@ Route::middleware(['auth'])->prefix('dashboard')->name('dashboard.')->group(func
         Route::get('/agama', 'viewAgama')->name('agama');
         Route::get('/dusun', 'viewDusun')->name('dusun');
         Route::get('/pendidikan', 'viewPendidikan')->name('pendidikan');
+        Route::get('/pekerjaan', 'viewPekerjaaan')->name('pekerjaan');
     });
 
     // Anggaran

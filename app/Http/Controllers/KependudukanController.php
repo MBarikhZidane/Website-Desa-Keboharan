@@ -16,15 +16,22 @@ class KependudukanController extends Controller
 
     public function viewDusun()
     {
-                        $setting = Setting::first();
+        $setting = Setting::first();
 
         return view('dashboard.kependudukan.dusun',compact('setting'));
     }
 
     public function ViewPendidikan()
     {
-                        $setting = Setting::first();
+        $setting = Setting::first();
 
         return view('dashboard.kependudukan.pendidikan',compact('setting'));
+    }
+
+    public function viewPekerjaaan()
+    {
+        $setting = Setting::first();
+
+        return view('dashboard.kependudukan.pekerjaan',compact('setting'));
     }
 }

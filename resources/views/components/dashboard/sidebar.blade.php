@@ -77,6 +77,15 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{ route('dashboard.kependudukan.pekerjaan') }}"
+                            class="submenu-item flex items-center px-4 py-2 rounded-lg
+                            {{ request()->routeIs('dashboard.kependudukan.pekerjaan') ? 'bg-white/10' : '' }}">
+
+                            Pekerjaan
+                        </a>
+                    </li>
+
                 </ul>
             </li>
 

@@ -2,24 +2,24 @@
 
 namespace App\Livewire\Kependudukan;
 
+use App\Models\Jenispekerjaan;
+use App\Models\Jumlahpekerjaan;
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\Jenispendidikan;
-use App\Models\Jumlahpendidikan;
 
-class PendidikanComponent extends Component
+class PekerjaanComponent extends Component
 {
     use WithPagination;
 
-    public $jumlah, $pendidikan_id;
+    public $jumlah, $pekerjaan_id;
     public $isEdit = false;
     public $selectedId;
-    public $pendidikans;
+    public $pekerjaans;
     public $showModal = false;
     public $showDeleteModal = false;
 
     protected $rules = [
-        'pendidikan_id' => 'required',
+        'pekerjaan_id' => 'required',
         'jumlah' => 'required|integer|min:0',
     ];
 
@@ -33,7 +33,7 @@ class PendidikanComponent extends Component
 
     public function resetFields()
     {
-        $this->pendidikan_id = '';
+        $this->pekerjaan_id = '';
         $this->jumlah = '';
         $this->isEdit = false;
         $this->selectedId = null;
@@ -41,7 +41,7 @@ class PendidikanComponent extends Component
 
     public function mount()
     {
-        $this->pendidikans = Jenispendidikan::all();
+        $this->pekerjaans = Jenispekerjaan::all();
     }
 
     public function create()
@@ -54,8 +54,8 @@ class PendidikanComponent extends Component
     {
         $this->validate();
 
-        Jumlahpendidikan::create([
-            'pendidikan_id' => $this->pendidikan_id,
+        Jumlahpekerjaan::create([
+            'pekerjaan_id' => $this->pekerjaan_id,
             'jumlah' => $this->jumlah,
         ]);
 
@@ -66,10 +66,10 @@ class PendidikanComponent extends Component
 
     public function edit($id)
     {
-        $agama = Jumlahpendidikan::findOrFail($id);
+        $agama = Jumlahpekerjaan::findOrFail($id);
 
         $this->selectedId = $id;
-        $this->pendidikan_id = $agama->pendidikan_id;
+        $this->pekerjaan_id = $agama->pekerjaan_id;
         $this->jumlah = $agama->jumlah;
         $this->isEdit = true;
         $this->showModal = true;
@@ -80,9 +80,9 @@ class PendidikanComponent extends Component
         $this->validate();
 
         if ($this->selectedId) {
-            $agama = Jumlahpendidikan::find($this->selectedId);
+            $agama = Jumlahpekerjaan::find($this->selectedId);
             $agama->update([
-                'pendidikan_id' => $this->pendidikan_id,
+                'pekerjaan_id' => $this->pekerjaan_id,
                 'jumlah' => $this->jumlah,
             ]);
 
@@ -100,7 +100,7 @@ class PendidikanComponent extends Component
 
     public function deleteConfirmed()
     {
-        Jumlahpendidikan::destroy($this->selectedId);
+        Jumlahpekerjaan::destroy($this->selectedId);
         session()->flash('message', 'Data Agama berhasil dihapus.');
         $this->showDeleteModal = false;
     }
@@ -113,7 +113,7 @@ class PendidikanComponent extends Component
 
     public function render()
     {
-        $jumlahs = Jumlahpendidikan::with('jenispendidikan')->orderBy('id', 'desc')->paginate(10);
-        return view('livewire.kependudukan.pendidikan-component', compact('jumlahs'));
+        $jumlahs = Jumlahpekerjaan::with('jenispekerjaan')->orderBy('id', 'desc')->paginate(10);
+        return view('livewire.kependudukan.pekerjaan-component', compact('jumlahs'));
     }
 }

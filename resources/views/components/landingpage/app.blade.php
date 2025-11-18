@@ -9,6 +9,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
     <title>Desa Keboharan</title>
     <style>
@@ -42,7 +43,7 @@
                 aspect-ratio: 3 / 4;
             }
         }
-        
+
     </style>
 </head>
 

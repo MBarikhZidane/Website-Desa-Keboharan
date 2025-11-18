@@ -15,6 +15,7 @@ use App\Models\Pendapatan;
 use App\Models\Petalokasi;
 use App\Models\Pengeluaran;
 use Illuminate\Http\Request;
+use App\Models\Jenispekerjaan;
 use App\Models\Jenispendidikan;
 
 class BerandaController extends Controller
@@ -110,7 +111,10 @@ class BerandaController extends Controller
         $dataDusun = $dusuns->map(fn($d) => $d->total_pria + $d->total_perempuan);
 
         $pendidikan = Jenispendidikan::with('jumlahpendidikans')->get();
+        $pekerjaan = Jenispekerjaan::with('jumlahpekerjaans')->get();
         $labelsPendidikan = $pendidikan->pluck('name');
+        $labelsPekerjaan = $pekerjaan->pluck('name');
+        $dataPekerjaan = $pekerjaan->map(fn($p) => $p->jumlahpekerjaans->sum('jumlah'));
         $dataPendidikan = $pendidikan->map(fn($p) => $p->jumlahpendidikans->sum('jumlah'));
         $setting = Setting::first();
 
@@ -129,6 +133,8 @@ class BerandaController extends Controller
             'labelsDusun' => $labelsDusun,
             'dataDusun' => $dataDusun,
             'labelsPendidikan' => $labelsPendidikan,
+            'labelsPekerjaan' => $labelsPekerjaan,
+            'dataPekerjaan' => $dataPekerjaan,
             'dataPendidikan' => $dataPendidikan,
             'dataAgama' => $dataAgama,
             'setting' => $setting,
@@ -152,6 +158,8 @@ class BerandaController extends Controller
                 'pembiayaan' => 0, // kalau belum ada tabel pembiayaan
                 'pendapatanRincian' => Pendapatan::where('tahun', $tahun)->pluck('total_anggaran'),
                 'belanjaRincian' => Pengeluaran::where('tahun', $tahun)->pluck('total_anggaran'),
+                'rincianpendapatan' => Pendapatan::where('tahun', $tahun)->get(),
+                'rincianbelanja' => Pengeluaran::where('tahun', $tahun)->get(),
                 'pembiayaanRincian' => [0, 0],
             ];
         }

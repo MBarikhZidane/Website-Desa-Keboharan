@@ -36,8 +36,8 @@
                                         class="w-24 h-24 object-cover rounded-lg border"></td>
                                 <td class="p-3">{{ $produk->name }}</td>
                                 <td class="p-3">{{ $produk->price }}</td>
-                                <td class="p-3">{{ $produk->description }}</td>
                                 <td class="p-3">{{ $produk->contact }}</td>
+                                                                <td class="p-3">{{ $produk->description }}</td>
                                 <td class="p-3 space-x-2">
                                     <button wire:click="edit({{ $produk->id }})"
                                         class="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600">
